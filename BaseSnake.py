@@ -35,6 +35,7 @@ while True:
     clock.tick(10)
 
 
+
     # This gets the keyboard input. Don't worry too much about the first couple lines.
     for keypress in pygame.event.get():
         if keypress.type == QUIT:
@@ -68,13 +69,16 @@ while True:
     for i in range(0, len(snakeBody)):
         temp = snakeBody[i].copy()
         snakeBody[i] = moveBody(oldPiece, snakeBody[i])
+
         oldPiece = temp
+
 
     # These are variables that are True or False depending on conditions.
     # What do we call these kinds of variables?
     hasHitWall = snakeHead.collidelist(walls) != -1
     hasHitBody = snakeHead.collidelist(snakeBody) != -1
     hasEaten = snakeHead.colliderect(apple)
+
 
     # Checks if the head collides with the wall.
 
@@ -85,6 +89,9 @@ while True:
     # Go ahead and do it here!
     if hasHitWall:
         quitGame()
+
+    if hasHitBody:
+        quitGame(Hit)
 
     # Checks if the head collides with the apple.
     if (hasEaten):
