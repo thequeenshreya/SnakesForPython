@@ -79,8 +79,9 @@ def moveBody(toRect, fromRect):
     deltaX = toRect.left - fromRect.left
     deltaY = toRect.top - fromRect.top
     return fromRect.move(deltaX, deltaY)
-randomRect()
+
 # Creates a random rectangle.
+randomRect()
 def randomRect():
     return Rect(randint(1, xBound - 2) * blockSize, randint(1, yBound - 2) * blockSize, blockSize, blockSize)
 

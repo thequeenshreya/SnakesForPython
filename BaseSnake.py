@@ -32,7 +32,7 @@ clock = pygame.time.Clock()
 # This loop is very interesting. When will it stop running?
 # (hint- when is the while condition false?)
 while True:
-    clock.tick(10)
+    clock.tick(score*2)
 
 
 
@@ -94,7 +94,12 @@ while True:
         quitGame2(Hit)
 
     # Checks if the head collides with the apple.
-    if (hasEaten):
+    if hasEaten:
+        apple = randomRect()
+        score=0
+        score= score+1
+
+
 
         apple = randomRect()
         snakeBody.append(oldPiece)
