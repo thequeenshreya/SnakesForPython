@@ -91,10 +91,11 @@ while True:
         quitGame()
 
     if hasHitBody:
-        quitGame(Hit)
+        quitGame2(Hit)
 
     # Checks if the head collides with the apple.
     if (hasEaten):
+
         apple = randomRect()
         snakeBody.append(oldPiece)
 
