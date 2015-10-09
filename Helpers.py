@@ -47,10 +47,10 @@ def printRect(text, rect):
 
 # Code for if snake runs into itself or game exits.
 def quitGame():
-    print "Game over!"
+    print "YouLost!"
     # How can we measure the player's score?
     print "Your score is: "
-    sys.exit(0)
+    sys.exit()
 
 # Code to move the head.
 def moveHead(headRect, dir):
@@ -99,7 +99,7 @@ def draw(oldPiece, head, body, appleRect, hasEaten, screen):
         pygame.draw.rect(screen, (0, 0, 0), oldPiece)
 
     # Draw the apple.
-    pygame.draw.rect(screen, (255, 0, 0), appleRect)
+    pygame.draw.rect(screen, (255, 0, 150), appleRect)
 
 
 
